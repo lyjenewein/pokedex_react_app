@@ -12,3 +12,6 @@ export default class Dashboard extends Component {
     )
   }
 }
+
+
+//Creating a dashboard and calling the pokemoncards on it

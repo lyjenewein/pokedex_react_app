@@ -22,6 +22,7 @@ const TYPE_COLORS = {
   steel: 'B5B5C3',
   water: '3295F6'
 };
+// defining the different colors for different types so they can be called later 
 
 export default class Pokemon extends Component {
   state = {
@@ -51,6 +52,8 @@ export default class Pokemon extends Component {
     hatchSteps: '',
     themeColor: '#EF5350'
   };
+//creating an object where later the data can be put in
+
 
   async componentDidMount() {
     const { pokemonIndex } = this.props.match.params;
@@ -92,7 +95,7 @@ export default class Pokemon extends Component {
       }
     });
 
-    // Convert Decimeters to Feet... The + 0.0001 * 100 ) / 100 is for rounding to two decimal places :)
+    // Convert Decimeters to Feet... The + 0.0001 * 100 ) / 100 is for rounding to two decimal places I know that wasnt neccessary for us here in Sweden, but I was curious how he programmed it so I followed the Youtube video)
     const height =
       Math.round((pokemonRes.data.height * 0.328084 + 0.00001) * 100) / 100;
 
@@ -129,7 +132,7 @@ export default class Pokemon extends Component {
       })
       .join(', ');
 
-    // Get Pokemon Description .... Is from a different end point uggh
+    // Get Pokemon Description .... Is from a different end point
     await Axios.get(pokemonSpeciesUrl).then(res => {
       let description = '';
       res.data.flavor_text_entries.some(flavor => {
@@ -474,3 +477,5 @@ export default class Pokemon extends Component {
     );
   }
 }
+
+//This is all the segment that comes up when you actually click on a card, its a lot of styling and telling the app where to put which info

@@ -8,9 +8,9 @@ import './App.css';
 import NavBar from './components/layout/NavBar'; //import Navbar from created file 
 import Dashboard from './components/layout/Dashboard'; //import Dashboard from created file 
 
-import backgroundImage from './pattern.png';
+import backgroundImage from './pattern.png'; // import background-image
 
-import Pokemon from './components/pokemon/Pokemon';
+import Pokemon from './components/pokemon/Pokemon'; // import the pokemon
 
 class App extends Component {
   render() {
@@ -29,5 +29,8 @@ class App extends Component {
     );
   }
 }
+
+//this part is what is actually displayed in the app
+//starts with a the background, then the navbar, then a container, then I called in the dashboard and the pokemon index 
 
 export default App;

@@ -9,6 +9,8 @@ export default class PokemonList extends Component {
         pokemon: null //where to save the file
     };
 
+
+
 async componentDidMount(){
     //called when component has initialized variables - the state - and has been mounted to UI
     const res = await axios.get(this.state.url);
@@ -36,4 +38,4 @@ async componentDidMount(){
 
 //react.fragment tells react this is like a div but when we go to load give me this next set 
 //then we check if this.state.pokemon is true otherwise return value null aka Loading
-
+//also calling the pokemon

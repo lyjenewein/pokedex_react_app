@@ -8,6 +8,7 @@ const Sprite = styled.img`
   height: 5em;
   display: none;
 `;
+//style with sprite
 
 const Card = styled.div`
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); 
@@ -22,6 +23,8 @@ const Card = styled.div`
   user-select: none;
   -o-user-select: none;
 `;
+//style for the card
+
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -34,6 +37,7 @@ const StyledLink = styled(Link)`
     text-decoration: none;
   }
 `;
+//style of links
 
 export default class PokemonCard extends Component {
     state = {
@@ -53,6 +57,8 @@ export default class PokemonCard extends Component {
     
         this.setState({ name, imageUrl, pokemonIndex });
       }
+
+      //creating object for pokemoncard components and then calling the API sprites for name, URL and index number 
     
   render() {
 
@@ -93,3 +99,5 @@ export default class PokemonCard extends Component {
 }
 
 //the function with uppercase makes the first letter uppercase and the others lower case 
+//creating the rows, columns and the style of cards with bootstraps, telling the app also what to do if its loading 
+//connecting and loading in the pokemonlist
